@@ -28,8 +28,7 @@ view: payment {
 
   measure: total_amount {
     type: sum
-    sql: ${amount}
-    tags: ["sales", "total sales"];;  }
+    sql: ${amount};;  }
   measure: average_amount {
     type: average
     sql: ${amount} ;;  }
