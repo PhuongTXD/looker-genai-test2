@@ -28,7 +28,8 @@ view: payment {
 
   measure: total_amount {
     type: sum
-    sql: ${amount} ;;  }
+    sql: ${amount}
+    tags: ["sales", "total sales"];;  }
   measure: average_amount {
     type: average
     sql: ${amount} ;;  }
@@ -66,16 +67,16 @@ view: payment {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	payment_id,
-	staff.staff_id,
-	staff.last_name,
-	staff.first_name,
-	staff.username,
-	customer.last_name,
-	customer.customer_id,
-	customer.first_name,
-	rental.rental_id
-	]
+  payment_id,
+  staff.staff_id,
+  staff.last_name,
+  staff.first_name,
+  staff.username,
+  customer.last_name,
+  customer.customer_id,
+  customer.first_name,
+  rental.rental_id
+  ]
   }
 
 }
